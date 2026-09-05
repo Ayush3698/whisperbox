@@ -1,0 +1,16 @@
+name = "whisperbox/contracts"
+version = "0.1.0"
+compiler = "v1.1.0"
+plutus = "v3"
+license = "Apache-2.0"
+description = "Privacy-critical validator for the WhisperBox anonymous submission dApp"
+
+[repository]
+user = "YOUR_GITHUB_USERNAME"
+project = "whisperbox"
+platform = "github"
+
+[[dependencies]]
+name = "aiken-lang/stdlib"
+version = "v2.1.0"
+source = "github"
