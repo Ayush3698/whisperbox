@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+*.log
+offchain/dist/
+contracts/plutus.json
+.DS_Store
