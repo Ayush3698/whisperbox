@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  offchain:
+    name: Off-chain (lint + test)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: offchain
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: offchain/package-lock.json
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Run tests
+        run: npm test -- --ci
+
+  contracts:
+    name: Validate Aiken contract
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Aiken
+        run: |
+          curl -sSfL https://install.aiken-lang.org | bash
+          echo "$HOME/.aiken/bin" >> "$GITHUB_PATH"
+
+      - name: Aiken check
+        working-directory: contracts
+        run: |
+          aiken check
+          aiken build
+
+  frontend:
+    name: Frontend sanity check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate HTML/JS present
+        run: |
+          test -f frontend/index.html
+          test -f frontend/app.js
+          echo "Frontend files present."
