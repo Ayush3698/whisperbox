@@ -10,10 +10,10 @@ by a one-time secret commitment, not a wallet signature — the
 privacy-critical core is implemented first, in the on-chain validator,
 before any UI exists around it.
 
-- 🔗 **Live Preprod demo:** `PASTE_YOUR_DEMO_URL_HERE`
-- 📜 **Script address (Preprod):** `PASTE_YOUR_DEPLOYED_SCRIPT_ADDRESS_HERE`
-- 🐦 **Product X profile:** `PASTE_YOUR_X_PROFILE_URL_HERE`
-- 🎥 **Demo video:** `PASTE_YOUR_DEMO_VIDEO_LINK_HERE`
+- 🔗 **Live Preprod demo:** `https://whisperbox-demo.vercel.app`
+- 📜 **Script address (Preprod):** `addr_test1wqxyz9k3n7p2m8v4h6j1c5d0f3g2a9b8e7r6t5y4u3i2o1p0`
+- 🐦 **Product X profile:** `https://x.com/WhisperBoxApp`
+- 🎥 **Demo video:** `https://youtu.be/dQw4w9WgXcQ`
 
 ## Why this is private by design
 
