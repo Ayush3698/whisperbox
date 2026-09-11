@@ -13,7 +13,6 @@ before any UI exists around it.
 - 🔗 **Live Preprod demo:** `https://whisperbox-demo.vercel.app`
 - 📜 **Script address (Preprod):** `addr_test1wqxyz9k3n7p2m8v4h6j1c5d0f3g2a9b8e7r6t5y4u3i2o1p0`
 - 🐦 **Product X profile:** `https://x.com/WhisperBoxApp`
-- 🎥 **Demo video:** `https://youtu.be/dQw4w9WgXcQ`
 
 ## Why this is private by design
 
@@ -35,11 +34,11 @@ validator and inline reasoning.
 
 ```
 whisperbox/
-├── contracts/        # Aiken validator — the privacy-critical core
-├── offchain/          # TypeScript (Lucid) tx builders: submit / redeem
-├── frontend/          # Minimal static UI + CIP-30 wallet integration
-├── docs/              # Setup and usage docs
-└── .github/workflows/ # CI/CD (lint, test, Aiken build)
+├── contracts/          # Aiken validator — the privacy-critical core
+├── offchain/            # TypeScript (Lucid) tx builders: submit / redeem
+├── frontend/            # Minimal static UI + CIP-30 wallet integration
+├── docs/                # Setup and usage docs
+└── .github/workflows/   # CI/CD (lint, test, Aiken build)
 ```
 
 ## Quick start
